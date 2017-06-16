@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ -z "$1" ]; then
-  echo "You must provide a glob matching the files to fault in"
+  echo "You must provide a list of files to fault in as arguments"
   exit 1
 fi
 
