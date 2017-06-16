@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 if [ -z "$1" ]; then
   echo "You must provide a list of files to fault in as arguments"
