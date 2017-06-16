@@ -6,3 +6,5 @@ if [ -z "$1" ]; then
 fi
 
 for filename in $(ls "$@"); do /usr/bin/fio --filename=$filename --rw=randread --bs=128k --iodepth=128 --ioengine=libaio --name=$filename; done
+
+if [ ! -z $NO_EXIT ]; then sleep infinity; fi
