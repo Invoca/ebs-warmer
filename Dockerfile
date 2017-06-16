@@ -1,3 +1,6 @@
+# Arguments passed to "docker run" are shell-expanded to filenames that will have their blocks faulted in.
+# Directory arguments will include all files in the directory, but will not descend into sub-directories.
+# docker run example: docker run invocaops/ebs_warmer /dir/*.ext /file.ext /dir
 FROM ubuntu:14.04
 
 RUN apt-get update \
