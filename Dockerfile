@@ -1,7 +1,7 @@
 # Arguments passed to "docker run" are shell-expanded to filenames that will have their blocks faulted in
 # Directory arguments will include all files in the directory, but will not descend into sub-directories
 # Setting the environment variable NO_EXIT will result in the container sleeping rather than exiting once complete
-# docker run example: docker run invocaops/ebs_warmer /dir/*.ext /file.ext /dir
+# docker run example: docker run invocaops/ebs_warmer /dir/*.ext /file.ext /dir2
 FROM ubuntu:14.04
 
 RUN apt-get update \
