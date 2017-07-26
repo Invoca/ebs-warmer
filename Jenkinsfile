@@ -4,8 +4,8 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh 'docker run --name ebs-warmer-test \
-                        --rm --pull \
+                sh 'docker pull jadametz/serverspec'
+                sh 'docker run --rm --name ebs-warmer-test \
                         -v /var/run/docker.sock:/var/run/docker.sock \
                         -v /mnt/$WORKSPACE/:/ebs-warmer \
                         -w /ebs-warmer \
