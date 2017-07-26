@@ -8,6 +8,7 @@ describe "Dockerfile" do
 
     set :backend, :docker
     set :docker_image, image.id
+    set :docker_container_create_options, { 'Entrypoint' => ['bash'] }
   end
 
   describe package('fio') do
