@@ -11,7 +11,7 @@ pipeline {
                         -w /ebs-warmer \
                         jadametz/serverspec \
                         --format progress --format RspecJunitFormatter --out rspec.xml'
-                junit 'respec.xml'
+                junit 'rspec.xml'
             }
         }
         stage('Tag') {
