@@ -19,7 +19,7 @@ pipeline {
                 sh 'docker rmi invocaops/ebs_warmer:test'
             }
         }
-        staging('Push') {
+        stage('Push') {
             environment {
                 DOCKERHUB_USER = credentials('dockerhub_user')
                 DOCKERHUB_PASSWORD = credentials('dockerhub_password')
